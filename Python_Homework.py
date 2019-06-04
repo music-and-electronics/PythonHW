@@ -173,9 +173,9 @@ print(template % (4.5560, 'Argentine Pesos', 1)) #template 문자열에 4.5560, 
 print('True and True = ', True and True) #True이고 True이면 True 출력
 print('False or Flase = ', False or False) #False 또는 False 이면 False 출력
 
-print('bool([]) = ', bool([]))
-print('bool([1, 2, 3]) = ', bool([1, 2, 3]))
-print('bool(''Hello world!'') = ', bool('Hello world!'))
+print('bool([]) = ', bool([])) #bool 함수 안의 배열이 비어있으므로 false를 출력
+print('bool([1, 2, 3]) = ', bool([1, 2, 3]))#bool 함수 안의 배열이 비어있지 않으므로 true를 출력
+print('bool(''Hello world!'') = ', bool('Hello world!'))#bool 함수 안의 문자열 값이 비어있지 않으므로 true를 출력
 print('bool('') = ', bool(''))
 print('bool(0) = ', bool(0))
 print('bool(1) = ', bool(1))
