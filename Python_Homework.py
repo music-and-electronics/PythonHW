@@ -176,32 +176,32 @@ print('False or Flase = ', False or False) #False 또는 False 이면 False 출�
 print('bool([]) = ', bool([])) #bool 함수 안의 배열이 비어있으므로 false를 출력
 print('bool([1, 2, 3]) = ', bool([1, 2, 3]))#bool 함수 안의 배열이 비어있지 않으므로 true를 출력
 print('bool(''Hello world!'') = ', bool('Hello world!'))#bool 함수 안의 문자열 값이 비어있지 않으므로 true를 출력
-print('bool('') = ', bool(''))
-print('bool(0) = ', bool(0))
-print('bool(1) = ', bool(1))
+print('bool('') = ', bool('')) #bool 함수안의 char가 비어있으므로, false 값을 출력
+print('bool(0) = ', bool(0)) #bool 함수안에 0값이 들어가면, false 값을 출력
+print('bool(1) = ', bool(1)) #bool 함수안에 1값이 들어가면, true 값을 출력 
 
 # C03.Scalar Types. Type casting
 
-s = '3.14159'
-print('type(s): ', type(s))
-fval = float(s)
-print('type(fval): ', type(fval))
-print('int(fval) = ', int(fval))
-print('bool(fval) = ', bool(fval))
-print('bool(0) = ', bool(0))
+s = '3.14159' #변수 s에 3.14159라는 문자열을 대입
+print('type(s): ', type(s)) #변수 s의 타입을 출력 => 문자열이므로 string class를 반환
+fval = float(s) #fval에 문자열 s를 float로 타입 캐스팅하여 대입
+print('type(fval): ', type(fval))#fval의 타입을 반환
+print('int(fval) = ', int(fval))#fval을 정수형으로 캐스팅한 값을 반환
+print('bool(fval) = ', bool(fval))#fval을 boolean 형으로 캐스팅한 값을 반환
+print('bool(0) = ', bool(0)) #bool함수에 0을 대입 한 결과를 출력
 
 # C04.Scalar Types. None
-a = None
-print('a is None: ', a is None)
-b = 5
-print('b is not None: ', b is not None)
+a = None #변수 a에 None 값을 대입 
+print('a is None: ', a is None) # a가 none이면 true를 출력
+b = 5 #변수 b에 5를 대입
+print('b is not None: ', b is not None)#b가 none이 아니면 true를 출력
 
-def add_and_maybe_multiply(a, b, c=None):
-    result = a + b
-    if c is not None:
-        result = result * c
-    return result
-print('Only add:', add_and_maybe_multiply(2, 3))
+def add_and_maybe_multiply(a, b, c=None): #매개 변수 a,b,c=None 을 갖는 함수를 선언
+    result = a + b #변수 result에 a+b를 대입
+    if c is not None: 
+        result = result * c #c가 None이 아니면, result에 c를 곱한 값을 대입
+    return result #c가 None이면, result를 그대로 반환
+print('Only add:', add_and_maybe_multiply(2, 3)) 
 print('Add and multiply: ', add_and_maybe_multiply(2, 3, 2))
 
 # C05.Scalar Types. Dates and times
