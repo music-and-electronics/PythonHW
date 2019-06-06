@@ -201,95 +201,95 @@ def add_and_maybe_multiply(a, b, c=None): #매개 변수 a,b,c=None 을 갖는 �
     if c is not None: 
         result = result * c #c가 None이 아니면, result에 c를 곱한 값을 대입
     return result #c가 None이면, result를 그대로 반환
-print('Only add:', add_and_maybe_multiply(2, 3)) 
-print('Add and multiply: ', add_and_maybe_multiply(2, 3, 2))
+print('Only add:', add_and_maybe_multiply(2, 3))  #c가 None 이므로 2+3을 반환
+print('Add and multiply: ', add_and_maybe_multiply(2, 3, 2)) #c가 2이므로 (2+3)*2를 반환
 
 # C05.Scalar Types. Dates and times
-from datetime import datetime, date, time
-dt = datetime(2019, 5, 21, 16, 42, 11)
+from datetime import datetime, date, time #datetime 모듈로 부터 datetime, date, time을 import
+dt = datetime(2019, 5, 21, 16, 42, 11) #2019년 5월 21일 16시 42분 11초를 dt에 대입
 
-print('Day: ', dt.day, ', Mimute: ', dt.minute)
-print('Date: ', dt.date())
-print('Time: ', dt.time())
+print('Day: ', dt.day, ', Mimute: ', dt.minute) #dt의 일, 분을 출력
+print('Date: ', dt.date()) #dt의 날짜를 출력  
+print('Time: ', dt.time()) #dt의 시간을 출력
 
-print('MM/DD/YYYY HH:MM: ', dt.strftime('%m/%d/%Y %H:%M'))
-print('String to Time: ', dt.strptime('20191031', '%Y%m%d'))
+print('MM/DD/YYYY HH:MM: ', dt.strftime('%m/%d/%Y %H:%M')) #월 일 년 , 시 , 분 순으로 출력
+print('String to Time: ', dt.strptime('20191031', '%Y%m%d'))# 20191031 문자열을 년월일포맷으로 변환하여 출력
 
 
-dt = datetime(2019, 5, 21, 16, 42, 11)
-print('current datetime: ', dt)
-print('modified datetime: ', dt.replace(minute=0, second=0))
+dt = datetime(2019, 5, 21, 16, 42, 11) #2019년 5월 21일 16시 42분 11초를 dt에 대입
+print('current datetime: ', dt) #dt의 값을 모두 출력
+print('modified datetime: ', dt.replace(minute=0, second=0)) #dt의 값을 0분과 0초로 바꾸어 출력
 
-dt2 = datetime(2011, 11, 15, 22, 30)
-delta = dt - dt2
-print('delta = ', delta)
-print('Type of delta: ', type(delta))
+dt2 = datetime(2011, 11, 15, 22, 30) #2011년 11월 15일 22시 30분을 dt2에 대입
+delta = dt - dt2 #dt에서 dt2를 뺀 시간차를 delta에 대입
+print('delta = ', delta) #delta를 출력
+print('Type of delta: ', type(delta)) #delta의 타입을 출력
 
-print('dt: ', dt2)
-print('dt+delta: ', dt2+delta)
+print('dt: ', dt2) #dt2를 출력
+print('dt+delta: ', dt2+delta) #dt2에 delta를 더한값을 출력
 
 # D00. Control Flow. if, elif, and else
-x = -1
+x = -1 #x에 -1을 대입
 
 if x < 0:
-    print('It''s negative')
+    print('It''s negative') #0보다 작으면 출력
 elif x == 0:
-    print('Equal to zero')
+    print('Equal to zero') #0이면 출력
 elif 0 < x < 5:
-    print('Positive but samller than 5')
+    print('Positive but samller than 5') #0초과 5미만이면 출력
 else:
-    print('Positive and larger than or equal 5')
+    print('Positive and larger than or equal 5') #5이상이면 출력
 
-x = 0
+x = 0 #x에 0을 대입
 
 if x < 0:
-    print('It''s negative')
+    print('It''s negative') #0보다 작으면 출력
 elif x == 0:
-    print('Equal to zero')
+    print('Equal to zero') #0이면 출력
 elif 0 < x < 5:
-    print('Positive but samller than 5')
+    print('Positive but samller than 5') #0초과 5미만이면 출력
 else:
-    print('Positive and larger than or equal 5')
+    print('Positive and larger than or equal 5') #5이상이면 출력
 
-x = 3
+x = 3#x에 3을 대입
 
 if x < 0:
-    print('It''s negative')
+    print('It''s negative')#0보다 작으면 출력
 elif x == 0:
-    print('Equal to zero')
+    print('Equal to zero')#0이면 출력
 elif 0 < x < 5:
-    print('Positive but samller than 5')
+    print('Positive but samller than 5')#0초과 5미만이면 출력
 else:
-    print('Positive and larger than or equal 5')
+    print('Positive and larger than or equal 5')#5이상이면 출력
 
 x = 12
 
 if x < 0:
-    print('It''s negative')
+    print('It''s negative')#0보다 작으면 출력
 elif x == 0:
-    print('Equal to zero')
+    print('Equal to zero')#0이면 출력
 elif 0 < x < 5:
-    print('Positive but samller than 5')
+    print('Positive but samller than 5')#0초과 5미만이면 출력
 else:
-    print('Positive and larger than or equal 5')
+    print('Positive and larger than or equal 5')#5이상이면 출력
 
 # D01. Control Flow. for loops
-sequence = [1, 2, None, 4, None, 5]
-total = 0
+sequence = [1, 2, None, 4, None, 5] #sequence 배열에 1, 2, None, 4, None, 5을 대입
+total = 0 #total에 0을 대입
 
 for value in sequence:
     if value is None:
-        continue
-    total += value
-print('total: ', total)
+        continue #value가 None이면 그대로 아무것도하지않고 진행
+    total += value #아니면 total에  value를 더함
+print('total: ', total) #total 출력
 
-sequence = [1, 2, 0, 4, 6, 5, 2, 1]
-total_until_5 = 0
+sequence = [1, 2, 0, 4, 6, 5, 2, 1] #sequence 배열에 1, 2, 0, 4, 6, 5, 2, 1을 대입
+total_until_5 = 0 #변수에 0을 대입
 for value in sequence:
     if value == 5 :
-        break
-    total_until_5 += value
-print('total_until_5: ', total_until_5)
+        break #value에 5 값이 들어있으면 for문 중단
+    total_until_5 += value #아니면 total에 value를 더함
+print('total_until_5: ', total_until_5) #total_until_5을 출력
 
 # D02. Control Flow. while loops
 
